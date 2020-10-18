@@ -85,4 +85,17 @@ class EmailService {
       throw FirebaseAuthException(message: FireBaseAuthError.kGeneralError);
     }
   }
+
+  Future<void> updateProfile(String name, String photoUrl) async {
+    try {
+      currentUser.updateProfile(displayName: name, photoURL: photoUrl);
+    } on FirebaseAuthException catch (e) {
+      final frontError = FireBaseAuthError.errorHandled(e.code);
+      print(frontError);
+      throw FirebaseAuthException(message: frontError);
+    } catch (e) {
+      print(e);
+      throw FirebaseAuthException(message: FireBaseAuthError.kGeneralError);
+    }
+  }
 }
