@@ -1,8 +1,8 @@
 name: firebase_login
 description: Plugin for firebase login.
 version: 0.0.1
-author:
-homepage:
+author: Miguel Asuar
+homepage: https://mayosoftware.es
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
   
-  firebase_auth: ^0.18.1+2
+  firebase_core: ^1.0.1
+  firebase_auth: ^1.0.1
 
 dev_dependencies:
   flutter_test:
